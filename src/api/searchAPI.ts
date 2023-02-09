@@ -19,7 +19,7 @@ export interface MetaProps {
   vehicleTypes: vehicleTypesProps[]
 }
 
-interface RVProps {
+export interface RVProps {
   id: number;
   name: string;
   description: string;

@@ -28,10 +28,7 @@ const keysToCamel = <T extends Record<string, any>>(o: T) => {
 
 export const deserialize = <T, K = unknown>(response: ExistingDocumentObject ) =>  {
   const result = fractalDeserializer<T>(response, { changeCase: CaseType.camelCase })
-
   const metaData = response.meta ? keysToCamel(response.meta) as K: null;
-
-  console.log(metaData);
 
   return { result, metaData: metaData }
 }

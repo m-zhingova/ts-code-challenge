@@ -1,0 +1,24 @@
+.rv-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.rv-list-item-image-container {
+  border-radius: 6px;
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.rv-list-item-image {
+  object-fit: cover;
+  height: 120px;
+  background-color: #444;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.rv-list-item-name {
+ padding: 16px;
+ color: #212831;
+ font-weight: 400;
+}
