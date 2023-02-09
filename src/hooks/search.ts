@@ -3,9 +3,9 @@ import { useQuery } from "react-query";
 import { FilterProps, getRVList } from "../api/searchAPI";
 
 export const useSearch = () => {
-  const [filters, setFilters] = useState<FilterProps | null>()
+  const [filters, setFilters] = useState<FilterProps | null>(null)
 
-  const { data, ...rest } = useQuery(['rv-list', ], getRVList);
+  const { data, ...rest } = useQuery(['rv-list', filters], () => getRVList(filters));
 
   const resetFilters = () => {
     setFilters(null)
